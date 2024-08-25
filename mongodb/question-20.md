@@ -1,0 +1,7 @@
+
+## question no: 20
+
+## question : What is the use of $lookup in MongoDB?
+
+## answer: $lookup is a powerful stage in MongoDB's Aggregation Framework that allows you to perform a left outer join between two collections in the same database. This is similar to SQL JOIN operations. The $lookup stage is used to combine data from two collections based on a specified field, allowing you to enrich documents in the pipeline with related data from another collection. The basic syntax for $lookup includes specifying the 'from' collection (the collection to join), the 'localField' (the field from the input documents), the 'foreignField' (the field from the documents in the 'from' collection), and the 'as' field (the name of the new array field to store the joined documents). For example, if you have a 'orders' collection and a 'customers' collection, you can use $lookup to add customer details to each order based on the 'customerId' field: { $lookup: { from: 'customers', localField: 'customerId', foreignField: '_id', as: 'customerDetails' } }. This operation results in each order document including an array field named 'customerDetails' that contains the matching customer document(s). $lookup is especially useful for creating comprehensive reports and dashboards by combining related data from multiple collections.
+      
