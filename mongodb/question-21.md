@@ -1,0 +1,7 @@
+
+## question no: 21
+
+## question : What are MongoDB's storage engines?
+
+## answer: MongoDB supports multiple storage engines that handle how data is stored, retrieved, and managed on disk. The most commonly used storage engine is WiredTiger, which became the default in MongoDB 3.2. WiredTiger offers a good balance of performance, scalability, and data compression, making it ideal for most workloads. It provides support for document-level locking, which improves performance in write-heavy environments by allowing more concurrent write operations. WiredTiger also includes built-in compression for both data and indexes, reducing storage costs and improving I/O performance. Another storage engine that MongoDB historically supported is MMAPv1, which was the default before WiredTiger. MMAPv1 uses memory-mapped files to store data and operates with a more traditional approach, but it has limitations, such as global write locks that can become a bottleneck under heavy write loads. As of MongoDB 4.2, MMAPv1 is deprecated and not recommended for new deployments. MongoDB also supports the In-Memory storage engine, which is designed for applications that require high-performance and low-latency access to data. This engine keeps all data in memory, providing the fastest possible data access, but at the cost of durability since data is not persisted to disk. Choosing the right storage engine depends on your specific use case, workload, and performance requirements.
+      
