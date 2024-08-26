@@ -1,0 +1,7 @@
+
+## question no: 47
+
+## question : How does MongoDB handle transactions in sharded clusters?
+
+## answer: MongoDB supports multi-document ACID transactions in sharded clusters starting from version 4.2. These transactions allow operations that span multiple shards to be executed as a single atomic unit, ensuring consistency and isolation across the entire cluster. When a transaction is initiated in a sharded cluster, MongoDB coordinates the transaction across all involved shards. The transaction begins by routing the operations to the relevant shards based on the shard keys. Each shard maintains a local transaction that keeps track of the operations performed on its data. If the transaction involves multiple shards, a two-phase commit protocol is used to ensure that either all shards commit the transaction or none do, maintaining atomicity across the cluster. The first phase involves preparing all shards for the transaction, and the second phase commits the transaction on all shards. If any shard fails during the transaction, MongoDB aborts the transaction to prevent partial updates. This approach ensures that transactions in sharded clusters maintain the same ACID guarantees as transactions in non-sharded deployments. However, multi-shard transactions can be more complex and may have performance implications due to the coordination required across shards, so they should be used judiciously.
+      
