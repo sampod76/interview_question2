@@ -1,0 +1,7 @@
+
+## question no: 32
+
+## question : What is a MongoDB URI?
+
+## answer: A MongoDB URI (Uniform Resource Identifier) is a connection string used to connect to a MongoDB database. The URI specifies the database host, port, database name, authentication credentials, and various connection options. It serves as a convenient and standardized way to configure the connection settings required to access a MongoDB instance from an application. A typical MongoDB URI looks like this: mongodb://username:password@host:port/database?options. The 'mongodb://' prefix indicates that this is a MongoDB connection string. The username and password are used for authentication, while the host and port specify the MongoDB server's address. The database part of the URI indicates which database to connect to upon authentication. Additionally, the URI can include options such as 'replicaSet', 'ssl', 'authSource', and 'retryWrites', among others, which control various aspects of the connection behavior. For example, to connect to a replica set using SSL, your URI might look like this: mongodb://user:pass@host1:27017,host2:27017,host3:27017/mydb?replicaSet=myReplicaSet&ssl=true. Using a MongoDB URI simplifies the process of connecting to the database, especially in environments where connection settings may vary, such as in cloud deployments or applications with multiple database servers.
+      
