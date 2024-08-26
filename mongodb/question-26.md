@@ -1,0 +1,7 @@
+
+## question no: 26
+
+## question : What is the use of $sort in MongoDB?
+
+## answer: $sort is a stage in MongoDB's Aggregation Framework and a method in basic queries used to order the documents in a specified order, either ascending or descending, based on one or more fields. Sorting is crucial when you need to present data in a particular sequence or when performing operations that require sorted data, such as finding the top N items. In the context of the Aggregation Framework, $sort is used within an aggregation pipeline to reorder the documents based on the specified sort criteria. The syntax for $sort involves passing an object where the keys are the fields to sort by, and the values are 1 for ascending order or -1 for descending order. For example, to sort users by their 'age' in descending order, you would use: { $sort: { age: -1 } }. This will reorder the documents so that the oldest users appear first. In basic queries, the sort() method is used similarly: db.users.find().sort({ age: -1 }). Sorting is often combined with other operations like $limit to retrieve a subset of the sorted data, such as the top 10 users by age. Using $sort efficiently can significantly improve the usability and performance of your queries, especially when dealing with large datasets.
+      
