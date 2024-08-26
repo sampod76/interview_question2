@@ -2,14 +2,24 @@
 node_modules
 /node_modules
 
+# .env
+
+.vercel
+/logger
+logger
+
+
+
 .env
 
-question
-/question
-question/
-/question/
+que
+/que
+que/
+/que/
 
-index.js
+/src
+/src/
+src
 
 .vercel
 
@@ -18,3 +28,4 @@ index.js
 it.js
 
 package.json
+yarn.lock
