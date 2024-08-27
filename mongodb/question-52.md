@@ -1,0 +1,8 @@
+
+      
+## question no: 52
+
+## question : What is MongoDB's WiredTiger storage engine?
+
+## answer: WiredTiger is the default storage engine in MongoDB since version 3.2. It is designed to provide high performance, scalability, and data compression, making it well-suited for modern applications that require efficient data storage and retrieval. WiredTiger offers several advantages over the older MMAPv1 storage engine, including support for document-level concurrency control, which allows multiple write operations to occur simultaneously on different documents, thereby improving throughput in write-heavy environments. One of the key features of WiredTiger is its use of compression for both data and indexes, which can significantly reduce the amount of disk space required to store data. This compression not only saves storage costs but also improves I/O performance by reducing the amount of data that needs to be read from or written to disk. WiredTiger also supports snapshot isolation, providing a consistent view of data for read operations while write operations are ongoing. This is particularly useful in scenarios where long-running queries need to be isolated from updates happening concurrently. Additionally, WiredTiger includes advanced features like checkpoints, which allow for faster recovery times in the event of a crash. Overall, WiredTiger is a robust and efficient storage engine that enhances MongoDB's ability to handle large-scale, high-performance applications.
+      
