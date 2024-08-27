@@ -1,7 +1,0 @@
-
-## question no: 25
-
-## question : What is the use of $project in MongoDB?
-
-## answer: $project is a stage in MongoDB's Aggregation Framework used to include, exclude, or add new fields to the documents passing through the aggregation pipeline. It allows you to shape the output documents by specifying which fields should be displayed and how they should be transformed. For example, if you have a collection of user documents and want to return only the 'username' and 'email' fields, you can use $project like this: { $project: { username: 1, email: 1, _id: 0 } }. In this example, '1' indicates that the field should be included, and '0' excludes the _id field from the output. $project can also be used to create new fields by applying expressions to existing fields. For instance, you can create a new field that concatenates the 'firstName' and 'lastName' fields into a full name: { $project: { fullName: { $concat: ['$firstName', ' ', '$lastName'] } } }. Additionally, $project allows you to reshape arrays and sub-documents, apply mathematical operations, and control which fields are returned in the final output. By using $project effectively, you can optimize the size and shape of the documents returned by your aggregation queries, making them more efficient and easier to work with.
-      

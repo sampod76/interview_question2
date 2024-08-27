@@ -1,7 +1,0 @@
-
-## question no: 39
-
-## question : How do you create a capped collection in MongoDB?
-
-## answer: Creating a capped collection in MongoDB involves using the createCollection() method with specific options to set the collection's maximum size and optionally the maximum number of documents it can hold. A capped collection is a special type of collection with a fixed size that automatically overwrites the oldest documents when the size limit is reached. To create a capped collection, you specify the 'capped' option as true and provide a 'size' option to define the maximum size in bytes. For example: db.createCollection('myCappedCollection', { capped: true, size: 500000 }). This command creates a capped collection named 'myCappedCollection' with a maximum size of 500,000 bytes (approximately 488 KB). Optionally, you can also set the 'max' option to limit the number of documents the collection can store, regardless of size: db.createCollection('myCappedCollection', { capped: true, size: 500000, max: 1000 }). Capped collections are useful for use cases like logging, where you want to retain only the most recent data and automatically discard old data without manual intervention. They provide predictable performance and are ideal for scenarios where data is continuously written and read in a circular buffer-like fashion.
-      

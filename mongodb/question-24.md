@@ -1,7 +1,0 @@
-
-## question no: 24
-
-## question : How do you update a document in MongoDB?
-
-## answer: Updating a document in MongoDB can be done using several methods, with the most common being updateOne(), updateMany(), and replaceOne(). The updateOne() method is used to update a single document that matches a specified filter. This method allows you to modify specific fields within the document without affecting the others. For example, to update the 'status' field of a user document where the 'username' is 'johndoe', you would use: db.users.updateOne({ username: 'johndoe' }, { $set: { status: 'active' } }). The $set operator is used to update specific fields. If the field does not exist, $set will create it. If you need to update multiple documents that match a filter, you would use updateMany(). This method applies the update operation to all documents that meet the criteria. For instance: db.users.updateMany({ status: 'inactive' }, { $set: { status: 'active' } }). Finally, replaceOne() is used to completely replace an existing document with a new document. Unlike updateOne() or updateMany(), replaceOne() replaces the entire document rather than modifying specific fields. In summary, MongoDB provides flexible options for updating documents, allowing for both partial updates and full replacements depending on your needs.
-      
