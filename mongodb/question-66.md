@@ -1,0 +1,8 @@
+
+      
+## question no: 66
+
+## question : What is MongoDB's MapReduce?
+
+## answer: MapReduce is a data processing paradigm supported by MongoDB that allows you to perform aggregation and processing on large data sets. It works by breaking down the task into two phases: the 'map' phase and the 'reduce' phase. In the map phase, MongoDB applies a JavaScript function to each document in the collection that emits key-value pairs. These key-value pairs are then grouped by key in the reduce phase, where another JavaScript function is applied to aggregate the values associated with each key. MapReduce is particularly useful for performing complex data analysis and transformations that cannot be easily accomplished using MongoDB's Aggregation Framework. For example, if you wanted to calculate the total sales for each product category in a collection of sales data, you could write a MapReduce operation that emits each sale's category as the key and the sale amount as the value. The reduce function would then sum the values for each category, producing a result that shows the total sales per category. While MapReduce is powerful and flexible, it can be slower than the Aggregation Framework, especially for large data sets. In many cases, the Aggregation Framework is preferred due to its performance and ease of use. However, MapReduce remains a valuable tool for specific use cases that require custom or more complex data processing logic.
+      
