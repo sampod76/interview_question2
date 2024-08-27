@@ -1,0 +1,8 @@
+
+      
+## question no: 74
+
+## question : What is the purpose of $merge in MongoDB's Aggregation Framework?
+
+## answer: $merge is a stage in MongoDB's Aggregation Framework that allows you to write the output of an aggregation pipeline into a collection, either by inserting new documents, updating existing documents, or both. The $merge stage is particularly useful for ETL (Extract, Transform, Load) operations, where you need to transform data and then store the results back into a collection. The $merge stage can be configured to perform different actions based on whether a document with a matching key already exists in the target collection. For example, you can use $merge to update existing documents if they match a certain condition or to insert new documents if no match is found. This flexibility makes $merge ideal for tasks like data deduplication, upserts, or materializing views. An example of using $merge is when you want to aggregate sales data and then store the results in a 'sales_summary' collection: db.sales.aggregate([ /* aggregation stages */, { $merge: { into: 'sales_summary', on: '_id', whenMatched: 'merge', whenNotMatched: 'insert' } }]). This pipeline writes the aggregated results into the 'sales_summary' collection, merging with existing documents or inserting new ones as needed. The $merge stage provides a powerful way to transform and persist data directly within MongoDB, streamlining complex data workflows.
+      
