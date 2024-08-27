@@ -1,0 +1,7 @@
+
+## question no: 42
+
+## question : What is the purpose of $inc in MongoDB?
+
+## answer: $inc is an operator in MongoDB used to increment or decrement the value of a field in a document. This operator is particularly useful for counters, totals, or any scenario where you need to adjust a numeric value incrementally. The $inc operator works by adding the specified value to the current value of the field. If the field does not exist, MongoDB will create it and set its value to the amount specified in $inc. For example, to increment the 'age' field of a document by 1, you would use: db.users.updateOne({ username: 'johndoe' }, { $inc: { age: 1 } }). This operation increases the 'age' field by 1. Similarly, to decrement a field, you would use a negative value: db.products.updateOne({ name: 'Widget' }, { $inc: { stock: -5 } }). This decreases the 'stock' field by 5. The $inc operator is atomic, meaning that it guarantees the field will be incremented correctly even if multiple update operations are occurring simultaneously. This makes $inc particularly useful in high-concurrency environments where accurate counting is critical, such as in inventory management systems, hit counters, or any application requiring precise numerical adjustments.
+      
