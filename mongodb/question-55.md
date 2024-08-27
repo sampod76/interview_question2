@@ -1,0 +1,8 @@
+
+      
+## question no: 55
+
+## question : What is a MongoDB capped collection?
+
+## answer: A capped collection in MongoDB is a type of collection that has a fixed size and follows a first-in, first-out (FIFO) data management policy. When the specified size limit is reached, the oldest documents in the collection are automatically overwritten by new documents. Capped collections are particularly useful for scenarios where you want to maintain a rolling log of data, such as system logs, event logs, or any application where only the most recent data is relevant. To create a capped collection, you use the createCollection() method with the 'capped' option set to true and specify the maximum size in bytes. Optionally, you can also set a maximum number of documents the collection can hold. For example: db.createCollection('logs', { capped: true, size: 5242880, max: 5000 }) creates a capped collection named 'logs' with a maximum size of 5 MB and a maximum of 5,000 documents. Capped collections offer high performance for insert operations because MongoDB allocates space for the collection upfront, and documents are stored in insertion order. However, capped collections do not support document deletion or updates that increase the size of a document. These characteristics make capped collections ideal for use cases where data is written frequently, and old data needs to be automatically discarded.
+      
