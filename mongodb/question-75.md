@@ -1,0 +1,8 @@
+
+      
+## question no: 75
+
+## question : What is MongoDB Atlas?
+
+## answer: MongoDB Atlas is a fully managed cloud database service provided by MongoDB, Inc. It allows users to deploy, operate, and scale MongoDB databases across various cloud platforms, including Amazon Web Services (AWS), Google Cloud Platform (GCP), and Microsoft Azure. Atlas automates many of the tasks associated with database management, such as provisioning, patching, backups, and scaling, allowing developers to focus on building applications rather than managing infrastructure. MongoDB Atlas provides a web-based interface for managing databases, clusters, and monitoring performance in real-time. It includes advanced features like automated backups, encryption at rest, and global clusters that distribute data across multiple geographic regions for improved performance and availability. Atlas also supports features like full-text search, automated scaling, and integrations with various other cloud services, making it a comprehensive solution for deploying and managing MongoDB in the cloud. One of the key advantages of MongoDB Atlas is its ability to scale seamlessly as your application grows, from small test deployments to large-scale production environments. With Atlas, you can start with a free tier and easily upgrade to more robust configurations as needed. This makes MongoDB Atlas an attractive option for developers and organizations looking to leverage MongoDB in a cloud-native environment.
+      
