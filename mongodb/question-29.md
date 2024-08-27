@@ -1,7 +1,0 @@
-
-## question no: 29
-
-## question : What is the use of $limit in MongoDB?
-
-## answer: $limit is a stage in MongoDB's Aggregation Framework and a method in basic queries that restricts the number of documents returned by a query to a specified maximum number. This is particularly useful when you want to retrieve only a subset of the results, such as the top N items in a sorted list. In the context of the Aggregation Framework, $limit is used to cap the number of documents passed to the next stage in the pipeline. For example, to get the top 5 highest-paid employees, you might use a pipeline that includes a $sort stage followed by a $limit stage: { $sort: { salary: -1 } }, { $limit: 5 }. This combination first sorts the employees by salary in descending order and then limits the results to the top 5. In basic queries, the limit() method works similarly: db.employees.find().sort({ salary: -1 }).limit(5). $limit is often used in conjunction with $skip to implement pagination, where you skip a certain number of documents and then limit the result to a specific number of documents. By using $limit effectively, you can control the volume of data returned by your queries, making your application more efficient and responsive.
-      

@@ -1,7 +1,0 @@
-
-## question no: 34
-
-## question : How do you perform a text search in MongoDB?
-
-## answer: Performing a text search in MongoDB is done using the $text operator, which allows you to search for text within string fields that have been indexed with a text index. To perform a text search, you first need to create a text index on the fields you want to search. For example, if you want to search within the 'title' and 'description' fields of a collection, you would create a text index like this: db.collection.createIndex({ title: 'text', description: 'text' }). Once the text index is in place, you can perform a search using the $text operator. For instance, to find documents that contain the word 'MongoDB' in either the title or description, you would use: db.collection.find({ $text: { $search: 'MongoDB' } }). MongoDB supports various options for refining text searches, such as the use of phrases, negation, and logical operators. You can also retrieve the relevance score of the results by including the $meta: 'textScore' in your projection. This score indicates how well each document matches the search criteria. Text search in MongoDB is case-insensitive and supports stemming, which means that different forms of a word, such as 'run', 'running', and 'ran', are considered equivalent. Text search is a powerful feature in MongoDB for building search functionality in applications.
-      

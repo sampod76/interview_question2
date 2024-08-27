@@ -1,7 +1,0 @@
-
-## question no: 37
-
-## question : What is the use of $or in MongoDB?
-
-## answer: The $or operator in MongoDB is used to combine multiple query expressions with a logical OR, meaning that documents that satisfy at least one of the specified conditions will be returned. This operator is useful when you need to retrieve documents that match any of several possible criteria. For example, if you want to find all documents where the 'status' is either 'active' or 'pending', you would use: db.collection.find({ $or: [ { status: 'active' }, { status: 'pending' } ] }). This query returns documents where the 'status' field is either 'active' or 'pending'. The $or operator can be combined with other operators to build more complex queries. For instance, to find documents where the 'status' is 'active' or the 'age' is greater than 30, you would use: db.collection.find({ $or: [ { status: 'active' }, { age: { $gt: 30 } } ] }). MongoDB processes the conditions within $or independently, so it is essential to ensure that each condition is correctly formulated to avoid unexpected results. Using $or effectively allows you to broaden your search criteria and retrieve documents that match any of multiple conditions, making it a versatile tool in query construction.
-      

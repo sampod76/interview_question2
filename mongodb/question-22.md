@@ -1,7 +1,0 @@
-
-## question no: 22
-
-## question : What is BSON in MongoDB?
-
-## answer: BSON, short for Binary JSON, is a binary-encoded serialization format used by MongoDB to store documents and make remote procedure calls. BSON is similar to JSON but includes extensions that provide additional data types not available in JSON, such as ObjectId, Date, and Binary. BSON's binary format is designed to be efficient both in terms of space and processing time, allowing for quick serialization and deserialization of data. BSON documents are often larger than their JSON equivalents because they include additional metadata, such as length prefixes and explicit type information. However, this overhead is offset by BSON's ability to efficiently handle complex data types and structures, making it well-suited for MongoDB's document-based model. BSON supports all the basic types in JSON, such as strings, numbers, and arrays, but also introduces several additional types like embedded documents, binary data, and more complex data structures. The use of BSON allows MongoDB to perform fast operations on documents, including indexing and querying, while maintaining flexibility in how data is structured. Overall, BSON is a crucial component of MongoDB's architecture, enabling it to handle diverse data efficiently and flexibly.
-      

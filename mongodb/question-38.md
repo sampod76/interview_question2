@@ -1,7 +1,0 @@
-
-## question no: 38
-
-## question : What is a replica set member priority in MongoDB?
-
-## answer: In a MongoDB replica set, each member can be assigned a priority, which determines its eligibility to become the primary member during an election. The primary member is the one that can accept write operations, while secondary members replicate data from the primary. The priority of a replica set member is set using the 'priority' parameter in the replica set configuration, with the default value being 1. Members with higher priority values are preferred candidates for becoming primary. For example, if you have three members with priorities 2, 1, and 0, the member with priority 2 is the most likely to be elected as the primary. Members with a priority of 0 cannot become primary and are used as secondaries only. This configuration is useful when you want to control the election process, ensuring that certain members are more likely to become primary or preventing specific members from ever becoming primary. Adjusting replica set member priorities allows you to manage failover scenarios, control where writes occur, and optimize the overall performance and reliability of your MongoDB deployment.
-      

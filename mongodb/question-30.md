@@ -1,7 +1,0 @@
-
-## question no: 30
-
-## question : What is the use of $skip in MongoDB?
-
-## answer: $skip is a stage in MongoDB's Aggregation Framework and a method in basic queries that is used to skip a specified number of documents in the result set. This is particularly useful when implementing pagination in your queries. By using $skip in combination with $limit, you can control which subset of the results to retrieve, allowing you to paginate through large datasets efficiently. For example, if you want to retrieve documents starting from the 11th document in a collection, you would use: db.collection.find().skip(10). This skips the first 10 documents and retrieves the rest. In an aggregation pipeline, $skip can be used after stages like $sort to skip a certain number of documents before applying further stages like $limit. For instance, to get the second page of results in a paginated list, you might use: { $sort: { date: -1 } }, { $skip: 10 }, { $limit: 10 }. This sorts the documents by date, skips the first 10, and then limits the output to the next 10 documents. Using $skip effectively allows you to manage large datasets and implement pagination, making your queries more user-friendly and responsive.
-      
