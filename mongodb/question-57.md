@@ -1,0 +1,8 @@
+
+      
+## question no: 57
+
+## question : What is the difference between MongoDB and Cassandra?
+
+## answer: MongoDB and Cassandra are both NoSQL databases, but they differ significantly in their design, data models, and use cases. MongoDB is a document-oriented database that stores data in flexible, JSON-like documents within collections. It is well-suited for applications requiring dynamic schemas, complex queries, and the ability to handle unstructured or semi-structured data. MongoDB's ease of use, support for rich query language, and powerful aggregation framework make it popular among developers building applications with varying data structures. It also supports multi-document ACID transactions, making it suitable for applications that require strong consistency. Cassandra, on the other hand, is a wide-column store designed for distributed, high-availability environments. It excels in handling massive amounts of data across multiple data centers with low latency and no single point of failure. Cassandra's data model is based on tables with rows and columns, similar to relational databases, but with a focus on scalability and write performance. It is ideal for use cases like time-series data, large-scale logging, and other scenarios where write throughput and horizontal scaling are critical. While MongoDB emphasizes flexibility and developer productivity, Cassandra is often chosen for its ability to scale horizontally with minimal operational overhead, particularly in scenarios that prioritize availability and partition tolerance over strong consistency.
+      
