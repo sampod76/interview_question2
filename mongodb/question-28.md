@@ -1,0 +1,7 @@
+
+## question no: 28
+
+## question : How do you delete a document in MongoDB?
+
+## answer: Deleting a document in MongoDB can be done using methods such as deleteOne(), deleteMany(), or findOneAndDelete(), depending on whether you want to delete a single document or multiple documents. The deleteOne() method is used to delete the first document that matches a specified filter. For example, to delete a user with the username 'johndoe', you would use: db.users.deleteOne({ username: 'johndoe' }). This operation removes the first document that matches the filter criteria. If multiple documents match, only the first one encountered will be deleted. The deleteMany() method is used when you need to delete multiple documents that match a filter. For example, to delete all users with the status 'inactive', you would use: db.users.deleteMany({ status: 'inactive' }). This operation removes all documents that match the filter criteria. Another method, findOneAndDelete(), not only deletes a document but also returns the deleted document, which can be useful if you need to know what was removed. For example: db.users.findOneAndDelete({ username: 'johndoe' }). This operation deletes the document and returns it in the response. Deleting documents in MongoDB is a straightforward process, and these methods provide flexibility depending on your specific needs.
+      
