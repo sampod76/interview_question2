@@ -1,0 +1,8 @@
+
+      
+## question no: 62
+
+## question : What is MongoDB's sharding?
+
+## answer: Sharding in MongoDB is a method used to distribute data across multiple servers or clusters to handle large datasets and high-throughput operations efficiently. This horizontal scaling technique allows MongoDB to manage and query massive amounts of data by splitting the dataset into smaller, more manageable pieces called shards. Each shard is a subset of the entire dataset, and collectively, the shards make up the complete data. Sharding is particularly useful for applications with large, growing datasets where a single server cannot handle the load or store the data efficiently. MongoDB's sharding architecture involves three main components: shards, a query router (mongos), and config servers. Shards store the actual data, the query router routes queries to the appropriate shards, and config servers maintain the metadata and configuration settings for the sharded cluster. Sharding is based on a shard key, which determines how the data is distributed across the shards. The shard key is critical to the performance and efficiency of the sharding process, as it affects data distribution and query performance. Choosing an appropriate shard key is essential to avoid issues like data skew, where one shard holds significantly more data than others. Sharding enables MongoDB to scale out horizontally, improving both read and write performance by distributing the load across multiple servers.
+      
