@@ -1,0 +1,8 @@
+
+      
+## question no: 81
+
+## question : What is MongoDB's $merge stage?
+
+## answer: The $merge stage in MongoDB's Aggregation Framework is used to write the results of an aggregation pipeline into a specified collection, either creating a new collection or updating an existing one. The $merge stage is particularly useful for creating materialized views, performing upserts, or consolidating data from multiple collections. When using $merge, you can specify the target collection, the conditions under which documents should be merged, and how to handle documents that match existing records in the target collection. For example, if you want to aggregate sales data and merge the results into a 'summary' collection, you would use: db.sales.aggregate([ /* pipeline stages */, { $merge: { into: 'summary', on: '_id', whenMatched: 'merge', whenNotMatched: 'insert' } }]). This command merges the pipeline results into the 'summary' collection, updating existing documents based on their _id field and inserting new documents when no match is found. The $merge stage is flexible and supports various modes for handling matching and non-matching documents, such as replacing, merging, or discarding them. By using $merge, you can efficiently update collections with the results of complex aggregations, making it a powerful tool for data processing and ETL (Extract, Transform, Load) workflows in MongoDB.
+      
