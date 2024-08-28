@@ -1,0 +1,8 @@
+
+      
+## question no: 85
+
+## question : What is the difference between MongoDB's $match and $project stages?
+
+## answer: $match and $project are both stages in MongoDB's Aggregation Framework, but they serve different purposes. The $match stage is used to filter documents based on specified criteria, similar to the WHERE clause in SQL. It allows you to narrow down the documents that will be processed in subsequent stages of the pipeline. For example, if you want to filter documents where the 'status' is 'active', you would use: db.collection.aggregate([{ $match: { status: 'active' } }]). This stage only passes documents with 'active' status to the next stage. On the other hand, the $project stage is used to reshape documents by including, excluding, or adding new fields. It allows you to control which fields are returned in the output and how they are transformed. For example, to include only the 'name' and 'status' fields and exclude the '_id' field, you would use: db.collection.aggregate([{ $project: { name: 1, status: 1, _id: 0 } }]). The $project stage can also be used to create new fields based on expressions, such as concatenating two fields or calculating a value. While $match is primarily used for filtering documents, $project is used for controlling the structure and content of the output documents. Understanding the difference between these stages is essential for effectively constructing aggregation pipelines in MongoDB.
+      
